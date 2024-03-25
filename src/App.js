@@ -15,10 +15,9 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React with Jeff
+          Learn React with Jeff and MSU!
         </a>
       </header>
-      <Profile />
     </div>
   );
 }

@@ -10,15 +10,19 @@ function Eclipse() {
 
   useEffect(() => {
     const getEclipse = async () => {
-      const res = await fetch("https://aa.usno.navy.mil/api/eclipses/solar/date?date=2024-4-8&coords=42.73,-84.48&height=0");
+      const res = await fetch("https://api.opendota.com/api/heroStats");
       const data = await res.json();
-      setEclipseData(data.properties);
+      setEclipseData(data);
     }
     getEclipse();
   });
 
   return (
-    <p>{eclipseData.event}</p>
+    <ul>
+      {eclipseData.map((eclipse) => (
+        <li>{eclipse.name}</li>
+      ))}
+    </ul>
   )
 }
 
